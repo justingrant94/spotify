@@ -2,26 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+/* he provided CSS code sets styling rules
+for the <html>, <body>, and :root
+ elements in an HTML document: */
+
+ 
+html, body, :root {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  color-scheme: dark;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hover-pulsate:hover {
+  animation: pulsate 0.5s infinite;
+}
+
+.hover-shrink:hover {
+  transform: scale(0.95);
+}
+
+/* Add this to your CSS */
+.hover\:gradient-blue-cyan {
+  background: linear-gradient(to right, #e3342f, #00bcd4);
+}
+
+/* Add this to your CSS */
+@keyframes pulsate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-pulsate:hover {
+  animation: pulsate 1s infinite;
+}
+
+.animate-pulsate:active {
+  animation: none; /* Disable animation on mouse release */
 }
