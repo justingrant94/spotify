@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+
+  "engines": {
+    "node": "v20.9.0"
+  },
   "dependencies": {
     "14": "^3.1.6",
     "@radix-ui/react-dialog": "^1.0.5",
