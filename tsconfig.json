@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "types": ["use-sound"],
+    "typeRoots": ["./node_modules/@types", "./node_modules/use-sound/dist"],    
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
