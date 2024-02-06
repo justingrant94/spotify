@@ -35,10 +35,10 @@ export async function POST(
       ],
       mode: 'subscription',
       allow_promotion_codes: true,
-      subscription_data: {
-        trial_from_plan: true,
-        metadata
-      },
+      // subscription_data: {
+      //   // trial_from_plan: true,
+      //   metadata
+      // },
       success_url: `${getURL()}/account`,
       cancel_url: `${getURL()}/`
     });
@@ -49,3 +49,5 @@ export async function POST(
     return new NextResponse('Internal Error', { status: 500 });
   }
 }
+
+// emove trial_from_plan field from the subscription_data object
